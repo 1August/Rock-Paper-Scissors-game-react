@@ -1,0 +1,61 @@
+.App{
+    height: 100vh;
+    background-color: #ececec;
+    font-size: 2rem;
+    display: grid;
+    place-items: center;
+}
+h2{
+    margin: 0;
+}
+.appInner{
+    width: 80%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+.paper, .rock, .scissors{
+    padding: 3rem;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    border: 1px solid rgba(0, 0, 0, .8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .8), inset -.5rem -.5rem .6rem rgba(0, 0, 0, .2), inset .5rem .5rem .6rem rgba(255, 255, 255, .3);
+    transition: all .5s;
+}
+
+.paper:hover, .rock:hover, .scissors:hover{
+    border: 1px solid rgba(0, 0, 0, .9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .4), inset -.5rem -.5rem .6rem rgba(0, 0, 0, .3), inset .5rem .5rem .6rem rgba(255, 255, 255, .5);
+    transform: translateY(-1rem);
+}
+.paper{
+    background: linear-gradient(-45deg, rgba(255, 0, 0, .4), rgba(255, 0, 0, .8));
+}
+.paper:hover{
+    background: linear-gradient(-45deg, rgba(255, 0, 0, .6), rgba(255, 0, 0, 1));
+}
+.rock{
+    background: linear-gradient(-45deg, rgba(0, 255, 0, .4), rgba(0, 255, 0, .8));
+}
+.rock:hover{
+    background: linear-gradient(-45deg, rgba(0, 255, 0, .6), rgba(0, 255, 0, 1));
+}
+.scissors{
+    background: linear-gradient(-45deg, rgba(0, 0, 255, .4), rgba(0, 0, 255, .8));
+}
+.scissors:hover{
+    background: linear-gradient(-45deg, rgba(0, 0, 255, .6), rgba(0, 0, 255, 1));
+}
+.cardsWrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    user-select: none;
+}
+.scoresWrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+}
